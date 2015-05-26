@@ -108,7 +108,7 @@
                     <h2>Desktop</h2>
                     <hr class="star-primary">
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
                     <br>
                     <p>Current state:
                     <?php
@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
                     <br>
                     <p>Current state:
                     <?php
@@ -161,7 +161,7 @@
                     ?>
                     </p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
                 <?php
                     if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio7/value")) == "1") {
                         echo "<a href=\"switchOffBed.php\" class=\"btn btn-lg btn-outline\">
