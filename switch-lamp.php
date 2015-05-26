@@ -108,7 +108,7 @@
                     <h2>Desktop</h2>
                     <hr class="star-primary">
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-4">
                     <br>
                     <p>Current state:
                     <?php
