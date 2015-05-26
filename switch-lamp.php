@@ -122,18 +122,17 @@
                     </p>
                 </div>
                 <div class="col-lg-4">
-                    <a href="switch-lampe.php" class="btn btn-lg btn-outlineinverted">
-                        <i class="download"></i> Switch
-                        <?php
-                            if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio8/value")) == "1") {
-                                echo "off";
-                            }
-                        else {
-                            echo "on";
-                        }
-                        ?>
-                        lamp
-                    </a>
+                <?php
+                    if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio8/value")) == "1") {
+                        echo "<a href="switchOff.php" class="btn btn-lg btn-outlineinverted">
+                        <i class="download"></i> Switch off lamp</a>";
+                    }
+                    else {
+                        echo "<a href="switchOn.php" class="btn btn-lg btn-outlineinverted">
+                        <i class="download"></i> Switch on lamp</a>";
+                    }
+                ?>
+
                 </div>
             </div>
         </div>
@@ -151,12 +150,28 @@
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
                     <br>
-                    <p>Current state: </p>
+                    <p>Current state:
+                    <?php
+                    if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio7/value")) == "1") {
+                        echo "On";
+                    }
+                    else {
+                        echo "Off";
+                    }
+                    ?>
+                    </p>
                 </div>
                 <div class="col-lg-4">
-                    <a href="switch-lampe.php" class="btn btn-lg btn-outline">
-                        <i class="download"></i> Switch lamp
-                    </a>
+                <?php
+                    if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio7/value")) == "1") {
+                        echo "<a href="switchOffBed.php" class="btn btn-lg btn-outlineinverted">
+                        <i class="download"></i> Switch off lamp</a>";
+                    }
+                    else {
+                        echo "<a href="switchOnBed.php" class="btn btn-lg btn-outlineinverted">
+                        <i class="download"></i> Switch on lamp</a>";
+                    }
+                ?>
                 </div>
             </div>
         </div>
