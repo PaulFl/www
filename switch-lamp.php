@@ -124,12 +124,12 @@
                 <div class="col-lg-4">
                 <?php
                     if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio8/value")) == "1") {
-                        echo "<a href="switchOff.php" class="btn btn-lg btn-outlineinverted">
-                        <i class="download"></i> Switch off lamp</a>";
+                        echo "<a href=\"switchOff.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        <i class=\"download\"></i> Switch off lamp</a>";
                     }
                     else {
-                        echo "<a href="switchOn.php" class="btn btn-lg btn-outlineinverted">
-                        <i class="download"></i> Switch on lamp</a>";
+                        echo "<a href=\"switchOn.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        <i class=\"download\"></i> Switch on lamp</a>";
                     }
                 ?>
 
@@ -164,12 +164,12 @@
                 <div class="col-lg-4">
                 <?php
                     if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio7/value")) == "1") {
-                        echo "<a href="switchOffBed.php" class="btn btn-lg btn-outlineinverted">
-                        <i class="download"></i> Switch off lamp</a>";
+                        echo "<a href=\"switchOffBed.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        <i class=\"download\"></i> Switch off lamp</a>";
                     }
                     else {
-                        echo "<a href="switchOnBed.php" class="btn btn-lg btn-outlineinverted">
-                        <i class="download"></i> Switch on lamp</a>";
+                        echo "<a href=\"switchOnBed.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        <i class=\"download\"></i> Switch on lamp</a>";
                     }
                 ?>
                 </div>
