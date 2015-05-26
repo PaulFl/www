@@ -121,7 +121,7 @@
                     ?>
                     </p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-lg-offset-2">
                 <?php
                     if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio8/value")) == "1") {
                         echo "<a href=\"switchOff.php\" class=\"btn btn-lg btn-outlineinverted\">
@@ -161,14 +161,14 @@
                     ?>
                     </p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-lg-offset-2">
                 <?php
                     if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio7/value")) == "1") {
-                        echo "<a href=\"switchOffBed.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        echo "<a href=\"switchOffBed.php\" class=\"btn btn-lg btn-outline\">
                         <i class=\"download\"></i> Switch off lamp</a>";
                     }
                     else {
-                        echo "<a href=\"switchOnBed.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        echo "<a href=\"switchOnBed.php\" class=\"btn btn-lg btn-outline\">
                         <i class=\"download\"></i> Switch on lamp</a>";
                     }
                 ?>
