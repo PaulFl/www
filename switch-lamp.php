@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <?
+    if ($_SERVER["REMOTE_ADDR"] == "127.0.0.1") {
+    return 0;
+    }
+    $handle = fopen("logs/IPs.log", "a+");
+    date_default_timezone_set('Europe/Paris');
+    fwrite($handle, date(DATE_RFC2822));
+    fwrite($handle, " : ");
+    fwrite($handle, $_SERVER["REMOTE_ADDR"]);
+    fwrite($handle, " : paulf.tk/switch-lampe.php");
+    fwrite($handle, "\n");
+    ?>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,7 +100,7 @@
         </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
+    <!-- Desktop -->
     <section id="desktop">
         <div class="container">
             <div class="row">
@@ -96,11 +108,38 @@
                     <h2>Desktop</h2>
                     <hr class="star-primary">
                 </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <br>
+                    <p>Current state:
+                    <?php
+                        if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio8/value")) == "1") {
+                            echo "On";
+                        }
+                    else {
+                        echo "Off";
+                    }
+                    ?>
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <a href="switch-lampe.php" class="btn btn-lg btn-outlineinverted">
+                        <i class="download"></i> Switch
+                        <?php
+                            if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio8/value")) == "1") {
+                                echo "off";
+                            }
+                        else {
+                            echo "on";
+                        }
+                        ?>
+                        lamp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Bed -->
     <section class="success" id="bed">
         <div class="container">
             <div class="row">
@@ -111,12 +150,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Here, you can switch on and off my desktop lamp...</p>
+                    <br>
+                    <p>Current state: </p>
                 </div>
                 <div class="col-lg-4">
-                    <p>[...] and [...]</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="switch-lampe.php" class="btn btn-lg btn-outline">
                         <i class="download"></i> Switch lamp
                     </a>
@@ -125,60 +162,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="text-center">

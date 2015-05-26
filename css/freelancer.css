@@ -269,6 +269,24 @@ section.success {
     background: #fff;
 }
 
+.btn-outlineinverted {
+    margin-top: 15px;
+    border: solid 2px #18bc9c;
+    font-size: 20px;
+    color: #18bc9c;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.btn-outlineinverted:hover,
+.btn-outlineinverted:focus,
+.btn-outlineinverted:active,
+.btn-outlineinverted.active {
+    border: solid 2px #18bc9c;
+    color: #fff;
+    background: #18bc9c;
+}
+
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
