@@ -11,7 +11,7 @@
     fwrite($handle, date(DATE_RFC2822));
     fwrite($handle, " : ");
     fwrite($handle, $_SERVER["REMOTE_ADDR"]);
-    fwrite($handle, " : paulf.tk/switch-lampe.php");
+    fwrite($handle, " : paulf.tk/switch-lamp.php");
     fwrite($handle, "\n");
     ?>
 
@@ -20,6 +20,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Personnal website">
     <meta name="author" content="Paul Fleury">
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <script type="text/javascript">
+		(function(document,navigator,standalone) {
+			// prevents links from apps from oppening in mobile safari
+			// this javascript must be the first script in your <head>
+			if ((standalone in navigator) && navigator[standalone]) {
+				var curnode, location=document.location, stop=/^(a|html)$/i;
+				document.addEventListener('click', function(e) {
+					curnode=e.target;
+					while (!(stop).test(curnode.nodeName)) {
+						curnode=curnode.parentNode;
+					}
+					// Condidions to do this only on links to your own app
+					// if you want all links, use if('href' in curnode) instead.
+					if(
+						'href' in curnode && // is a link
+						(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
+						(	!(/^[a-z\+\.\-]+:/i).test(chref) ||                       // either does not have a proper scheme (relative links)
+							chref.indexOf(location.protocol+'//'+location.host)===0 ) // or is in the same protocol and domain
+					) {
+						e.preventDefault();
+						location.href = curnode.href;
+					}
+				},false);
+			}
+		})(document,window.navigator,'standalone');
+	</script>
 
     <title>Paul's lamps</title>
 
@@ -124,11 +151,11 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                 <?php
                     if (trim(@shell_exec("sudo cat /sys/class/gpio/gpio8/value")) == "1") {
-                        echo "<a href=\"switchOff.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        echo "<a href=\"switchOffDesktop.php\" class=\"btn btn-lg btn-outlineinverted\">
                         <i class=\"download\"></i> Switch off lamp</a>";
                     }
                     else {
-                        echo "<a href=\"switchOn.php\" class=\"btn btn-lg btn-outlineinverted\">
+                        echo "<a href=\"switchOnDesktop.php\" class=\"btn btn-lg btn-outlineinverted\">
                         <i class=\"download\"></i> Switch on lamp</a>";
                     }
                 ?>
