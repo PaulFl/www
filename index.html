@@ -9,7 +9,15 @@
     <meta name="description" content="Personnal website">
     <meta name="author" content="Paul Fleury">
     <meta name="apple-mobile-web-app-capable" content="yes">
-
+    <link rel="stylesheet" type="text/css" href="js/add-to-homescreen/style/addtohomescreen.css">
+    <script src="js/add-to-homescreen/src/addtohomescreen.js"></script>
+    <script>
+	    addToHomescreen({
+		    skipFirstVisit: true,
+		    maxDisplayCount: 2,
+		    message: 'Add this webapp to your home screen 😉: tap %icon and then <strong>Add to Home Screen</strong>' 
+	    });
+    </script>
     	<script type="text/javascript">
 		(function(document,navigator,standalone) {
 			// prevents links from apps from oppening in mobile safari
