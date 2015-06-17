@@ -24,6 +24,16 @@
 		    message: 'Add this webapp to your home screen 😉: tap %icon and then <strong>Add to Home Screen</strong>' 
 	    });
     </script>
+    <script>
+	      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			      ga('create', 'UA-63581217-1', 'auto');
+			        ga('send', 'pageview');
+
+			</script>
     	<script type="text/javascript">
 		(function(document,navigator,standalone) {
 			// prevents links from apps from oppening in mobile safari
@@ -142,8 +152,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#projectModal1" class="portfolio-link" data-toggle="modal">
+                <div class="col-sm-4 portfolio-item" id="simon">
+                    <a href="#projectSimon" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -177,7 +187,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>Here, you can switch on and off my desktop lamp...</p>
+                    <p>Here, you can switch on and off my bedroom's lamps...</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="switch-lamp.php" class="btn btn-lg btn-outline">
@@ -292,7 +302,7 @@
     </div>
 
     <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="projectSimon" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -307,12 +317,12 @@
                             <h2>Simon says game</h2>
                             <hr class="star-primary">
                             <img src="img/projects/simon.png" class="img-responsive img-centered" alt="">
-                            <p>This Simon game is my first soldered project. It is based on an Atmege 328.</p>
+                            <p>This Simon game is my first soldered project. It is based on an Atmega 328.</p>
                             <p align="left">Il does include:</p>
                             <ul align="left" style="list-style-type:circle">
                                 <li>An internal speaker</li>
                                 <li>A switch to jack output (no sound if nothing connected)</li>
-                                <li>A 7 segments display for score (best score at bootime)</li>
+                                <li>A 7 segments display for score (best score at boottime)</li>
                                 <li>A new game button (top right)</li>
                                 <li>4 green and red LEDs</li>
                                 <li>4 tactile buttons (if pressed after game over, last melody is played)</li>
