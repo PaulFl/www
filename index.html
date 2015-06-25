@@ -176,7 +176,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Lamp section -->
     <section class="success" id="lamp">
         <div class="container">
             <div class="row">
@@ -278,7 +278,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>About me</h3>
-                        <p>I'm a 16 yo student living in France and I '</p>
+                        <p>I'm a 16 yo student living in France and I do stuff</p>
                     </div>
                 </div>
             </div>
@@ -328,7 +328,7 @@
                                 <li>4 tactile buttons (if pressed after game over, last melody is played)</li>
                                 <li>An acceleration feature</li>
                             </ul>
-                            <p>You can view or download code (<a href="files/projects/electronics/simon/source/">view</a> | <a href="files/projects/electronics/simon/simon-source.zip" download="simon-source">download</a>) and schematics (<a href="files/projects/electronics/simon/schematics/">view</a> | <a href="files/projects/electronics/simon/simon-schematics.zip/" download="simon-schematics">download</a>)<br>
+                            <p>You can view or download code (<a href="files/projects/electronics/simon/source/">view</a> | <a href="files/projects/electronics/simon/simon-source.zip" download="simon-source">download</a>) and schematics (<a href="files/projects/electronics/simon/schematics/">view</a> | <a href="files/projects/electronics/simon/simon-schematics.zip" download="simon-schematics">download</a>)<br>
                                 Code an schematics are also open sourced and updated on my <a href="https://github.com/PaulFl">Github account</a></p>
                             <ul class="list-inline item-details">
                                 <li>Author:
@@ -366,11 +366,12 @@
                             <h2>Capacitive sensor for lamp control (using Raspberry Pi)</h2>
                             <hr class="star-primary">
                             <img src="img/projects/cap_sensor.png" class="img-responsive img-centered" alt="">
-                                <p>This is my first project about home automation. It allows you to control one lamps through a relay (always be very carefull with high voltage ;)) just by touchin a can. In this project, I'm using a Raspberry Pi but it can also be done with an Arduino or any microcontroller ! I've added a touch feedback in the can with a small LED which turns off when you're touching the can. A Python script running as a deamon on the RPi does the logic.</p>
+                                <p>This is my first project about home automation. It allows you to control one lamps through a relay (always be very carefull with high voltage ;)) just by touching a can. In this project, I'm using a Raspberry Pi but it can also be done with an Arduino or any microcontroller! I've added a touch feedback in the can with a small LED which turns off when you're touching the can. A Python script running as a deamon on the RPi does the logic.</p>
+                                <p>I'm using a 1mΩ resistor (one leg is connected to send pin and the other to receive pin). You then just have to conect the can to the receive pin. You may have to adjust the threshold value into the script</p>
                             <p>I'm posting below the code for the RPi (and the Arduino code as well) and all the schematics.</p>
                             <ul align="left" style="list-style-type:circle">
-                                <li>The Python deamon (<a href="#">view</a> | <a href="#" download="cap-sensor-python">download</a>)</li>
-                                <li>The Arduino code (adaptable to any microcontroller) (<a href="#">view</a> | <a href="#" download="cap-sensor-arduino">download</a>)</li>
+                                <li>The Python deamon (<a href="files/projects/electronics/lampCapSensor/source">view</a> | <a href="files/projects/electronics/lampCapSensor/capSensor-python.zip" download="cap-sensor-python">download</a>)</li>
+                                <li>The Arduino code (adaptable to any microcontroller) (<a href="files/projects/electronics/lampCapSensor/source">view</a> | <a href="files/projects/electronics/lampCapSensor/capSensor-arduino.zip" download="cap-sensor-arduino">download</a>)</li>
                                 <li>Schematics (<a href="#">view</a> | <a href="#" download="cap-sensor-schematics">download</a>)</li>
                             </ul>
                             <ul class="list-inline item-details">
