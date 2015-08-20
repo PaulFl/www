@@ -75,7 +75,7 @@
 	fwrite($handle, "\n");
 
 	// Send a direct message
-	$options = array("screen_name" => "@fleurypaul", "text" => "{$_SERVER["REMOTE_ADDR"]} a éteint la lampe Bed");
+	$options = array("screen_name" => "@fleurypaul", "text" => "{$_SERVER["REMOTE_ADDR"]} switched off bed's lamp");
 	$connection->post('direct_messages/new', $options);
 
 	// Switch light on
