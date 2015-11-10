@@ -79,7 +79,8 @@
 	$connection->post('direct_messages/new', $options);
 
 	// Switch light on
-	shell_exec('sudo gpio write 10 1');
+	if(idate('H')<22 && idate('H')>6)
+		shell_exec('sudo gpio write 10 1');
 	header('Location: switch-lamp.php#desktop');
 ?>
         
