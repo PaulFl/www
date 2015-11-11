@@ -130,7 +130,8 @@
                     <div class="intro-text">
                         <span class="name">Paul's lamps</span>
                         <hr class="star-light">
-                        <span class="skills">Switch on and off my room's lamps (dektop and bed)</span>
+			<span class="skills">Switch on and off my room's lamps (dektop and bed)</br>
+			<p style="font-style:italic">PS - You can't switch on my lamps at night anymore cause I don't want to be woken up every night anymore 😁</p></span>
                     </div>
                 </div>
             </div>
