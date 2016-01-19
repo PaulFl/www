@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+<meta charset="utf-8">
+<meta name="description" content="Here, you can switch on and off my berdoom's lamps..." />
+<meta name="author" content="Paul Fleury">
     <?
     if ($_SERVER["REMOTE_ADDR"] == "127.0.0.1") {
     return 0;
