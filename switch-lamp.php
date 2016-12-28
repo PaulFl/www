@@ -253,7 +253,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; paulf.tk 2016
+                        Copyright &copy; paulf.tk 2017
                     </div>
                 </div>
             </div>
