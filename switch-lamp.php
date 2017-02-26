@@ -244,7 +244,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>About me</h3>
-                        <p>I'm a 17 yo student living in France and I do stuff</p>
+                        <p>I'm an 18 years old student.</p>
                     </div>
                 </div>
             </div>
