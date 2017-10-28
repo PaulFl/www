@@ -244,7 +244,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>About me</h3>
-                        <p>I'm an 18 years old student.</p>
+                        <p>I'm a 19 years old student.</p>
                     </div>
                 </div>
             </div>
