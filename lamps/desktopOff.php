@@ -14,13 +14,12 @@
 
     </script>
  
-        <title>Switched off !</title>
+        <title>Desktop Lamp OFF</title>
         <meta charset="utf-8" />
     </head>
     <body>
 <?
-	// Switch light on
-	shell_exec('sudo gpio write 11 0');
+	shell_exec('sudo gpio write 10 0');
 ?>
         
     </body>
