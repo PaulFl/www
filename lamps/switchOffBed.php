@@ -21,7 +21,6 @@
 <?
 	// Switch light on
 	shell_exec('sudo gpio write 11 0');
-	header('Location: switch-lamp.php#bed');
 ?>
         
     </body>
