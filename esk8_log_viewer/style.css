@@ -1,0 +1,70 @@
+
+.slow .toggle-group {
+    : left 0.7s;
+    -webkit-transition: left 0.7s;
+}
+
+#csv-file {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 10000;
+}
+
+.highcharts-tooltip {
+
+    border: 1px solid black;
+}
+
+#settings {
+    padding-top: 10px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+
+#wrapper {
+    padding: 0;
+}
+
+#map-summary-container {
+    height: 50%;
+    margin: 0;
+}
+
+#statistics {
+    margin: 0;
+}
+
+#map-container, #map {
+    height: 100%;
+    padding: 0;
+}
+
+#summary {
+    height: 100%;
+    padding: 0;
+}
+
+#summary .row:nth-child(n) {
+    height: 33.3%;
+}
+#chartContainer {
+    height: 50%;
+    width: 100%;
+    padding: 0;
+}
+
+.vcenter {
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+
+
+
+
