@@ -75,20 +75,7 @@
 	fwrite($handle, "\n");
 
 	// Send a direct message
-$data = [
-'event' => [
-'type' => 'message_create',
-'message_create' => [
-'target' => [
-'recipient_id' => 469446548
-],
-'message_data' => [
-'text' => 'Hello World!'
-]
-]
-]
-];
-$result = $connection->post('direct_messages/events/new ', $data, true); // Note the true
+
 	$options = array("screen_name" => "@fleurypaul", "text" => "{$_SERVER["REMOTE_ADDR"]} switched off bed's lamp");
 	$connection->post('direct_messages/new', $options);
 
